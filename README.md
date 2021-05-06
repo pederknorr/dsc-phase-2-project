@@ -5,7 +5,7 @@
 
 ## Overview
 
-This proposal contains an analysis of house sales data in King County in order to provide King County home owners with necessary information as they prepare to renovate and sell their homes. Specifically, it provides actionable insights with respect to what kind of home renovations the home owners might make with the goal of maximizing the sale price of their home. Initial analysis of home sale price and other housing data shows that home sale prices are most positively related to the renovation status (ie if the home was renovated at all), grade, and condition of the home. Home owners can use this analysis to choose which renovations to make as they seek to achieve the highest sale price possible for their home.
+This proposal contains an analysis of house sales data in King County in order to provide King County home owners with necessary information as they prepare to renovate and sell their homes. Specifically, it provides actionable insights with respect to what kind of home renovations the home owners might make with the goal of maximizing the sale price of their home. Initial analysis of home sale price and other housing data shows that home sale prices are most positively related to the renovation status (ie if the home was renovated at all), grade, condition of the home, and number of bathrooms, while number of floors was the most negatively related . Home owners can use this analysis to choose which renovations to make as they seek to achieve the highest sale price possible for their home.
 
 
 ## Business Problem
@@ -25,7 +25,7 @@ In this analysis, I create and iterate through several multiple linear regressio
 
 ## Results
 
-The multiple linear regression analysis rendered three key insights:
+The multiple linear regression analysis rendered five key insights:
 
 ### Renovated homes sell for a higher price on average
 
@@ -39,16 +39,27 @@ The multiple linear regression analysis rendered three key insights:
 
 ![graph3](./images/price_by_condition.png)
 
+### Homes with more bathrooms sell for a higher price on average
+
+![graph4](./images/price_by_bathrooms.png)
+
+### More floors do not necessarily mean higher sale price on average
+
+![graph5](./images/price_by_floors.png)
 
 ## Conclusions
 
-Based on this multiple linear regression analysis, I would provides three recommendations for King County home owners looking to renovate and sell their homes, with the goal of maximizing their home sale price:
+Based on this multiple linear regression analysis, I would provides five recommendations for King County home owners looking to renovate and sell their homes, with the goal of maximizing their home sale price:
 
-- **Any renovation is better than none.** As evidenced by a positive coefficient of 32,199.82, simply the fact that a home was renovated at all, in any capacity, could result in an increase in home price of over $30,000. Based on those results, I would recommend that homeowners conduct some kind of renovation, no matter how small.
+- **Any renovation is better than none.** As evidenced by a positive coefficient of 35,935.23, simply the fact that a home was renovated at all, in any capacity, could result in an increase in home price of over $30,000. Based on those results, I would recommend that homeowners conduct some kind of renovation, no matter how small.
 
-- **Grade is king.** With a positive coefficient of 42,070.53, increasing the grade of a home by one level on a scale from 1-13 could result in an increase in home price of over $40,000. Grade is defined by King County as an overall grade given to the housing unit based on King County grading system from 1 to 13, where 1-3 falls short of building construction and design, 7 has an average level of construction and design, and 11-13 have a high quality level of construction and design. If a homeowner can improve the grade level of their home, whether by improving the construction or design of the home, it could pay large dividends.
+- **Grade is king.** With a positive coefficient of 43,422.27, increasing the grade of a home by one level on a scale from 1-13 could result in an increase in home price of over $40,000. Grade is defined by King County as an overall grade given to the housing unit based on King County grading system from 1 to 13, where 1-3 falls short of building construction and design, 7 has an average level of construction and design, and 11-13 have a high quality level of construction and design. If a homeowner can improve the grade level of their home, whether by improving the construction or design of the home, it could pay large dividends.
 
-- **Condition is last, but not least.** Represented by a positive coefficient of 22,825.45, increasing the condition of a home by one level on a scale from 1-5, could result in an increase in home price of over $20,000. Condition is defined by King County as an index from 1 to 5 based on the overall condition of the home. Homeowners should focus on improving the condition of the home, potentially by replacing appliances or other run down features of the home.
+- **Condition is last, but not least.** Represented by a positive coefficient of 23,929.73, increasing the condition of a home by one level on a scale from 1-5, could result in an increase in home price of over $20,000. Condition is defined by King County as an index from 1 to 5 based on the overall condition of the home. Homeowners should focus on improving the condition of the home, potentially by replacing appliances or other run down features of the home.
+
+- **Everyone loves bathrooms** Represented by a positive coefficient of 12,716.6, increasing the number of bathrooms in a home by one could result in an increase in home price of over $12,000. Homeowners should consider adding bathrooms as a tangible way of increasing their homes sale price.
+
+- **Floors aren't everything** Represented by a coefficient of -11,872.06, according to the model, adding floors to a home could potentially have a negative impact on sale price. Home owners should avoid adding floors, as it might not actually lead to higher home value.
 
 ## For More Information
 
